@@ -1,27 +1,38 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 
-import iconLib from '../../utils/fontawesome/icons';
 import "./navbar.css";
 
-const logo = "https://react-template-statics.s3.amazonaws.com/img/petSitter/logo_react.png";
+// Style NavBar
 
 export default function TopNavBar(props) {
-  const title = props.title;
+
   const variant = props.variant ? props.variant : 'dark';
-  const bg = props.bg ? props.bg : 'light';
 
   return (
-    <Navbar id="navBar" fixed="top" bg={bg} variant={variant} expand="lg">
+    <Navbar id="navBar" variant={variant} fixed="top" expand="lg">
       <Container>
-        <Navbar.Brand href="#home" className="fw-bold">
-          <img src={logo} width={100}/>
+        <Navbar.Brand href="#Home" className="fw-bold text-dark-1">
+          <img src={props.logo} width={100} alt="Fra And Jazz"/>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-          {props.children}
-        </Navbar.Collapse>
+        <Navbar.Toggle className="bg-secondary-gr" aria-controls="offcanvasNavbar" />
+        <Navbar.Offcanvas
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+        placement="start"
+        className="justify-content-end bg-offcanvas-gr bg-transparent mask-75"
+        >
+              <Offcanvas.Header closeButton />
+              <Offcanvas.Body className="d-flex align-items-center">
+                <Nav className="justify-content-end flex-grow-1 fs-2 font-1 pe-3">
+                  {props.children}
+                </Nav>
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+
       </Container>
     </Navbar>
   );

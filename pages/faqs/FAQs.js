@@ -6,7 +6,7 @@ import iconLib from '../../utils/fontawesome/icons';
 const logo = iconLib.logo;
 
 const FAQs = (props) => {
-  const heroTitle = 'Pet Sitter v0.0.1';
+  const heroTitle = 'FAQs';
   const subTitle =
     'Culpa flank officia, in hamburger ball tip ullamco lorem boudin tri-tip ut eu irure.';
 

@@ -164,12 +164,13 @@ const BarfResults = (props) => {
 const BarfResultsData = (props) => {
   const data = props.data;
   const tHeader = (
-    <>
+    <tr>
       <th>Description</th>
       <th>Perc. %</th>
       <th>Amount g.</th>
-    </>
+    </tr>
   );
+
   const tbody = data.map((ingredient) => {
     return (
       <tr>
@@ -182,7 +183,7 @@ const BarfResultsData = (props) => {
   return (
     <Table flush hover className="my-5">
       <thead>
-        <tr>{tHeader}</tr>
+        {tHeader}
       </thead>
       <tbody>{tbody}</tbody>
     </Table>
@@ -214,7 +215,7 @@ const InputDog = (props) => {
           />
         </FloatingLabel>
       </Form.Group>
-      <Form.Group class="d-flex mt-3 ms-3" style={{ height: '40px' }}>
+      <Form.Group className="d-flex mt-3 ms-3" style={{ height: '40px' }}>
         <Form.Label className="d-inline-flex">
           Puppy
           <Form.Check

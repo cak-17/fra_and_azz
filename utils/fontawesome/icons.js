@@ -1,4 +1,3 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './fontawesome';
 
@@ -20,6 +19,7 @@ const iconLib = {
     check: formatIcon('check', 'text-success'),
   },
   services: {
+    welfCheck: formatIcon('shield-dog', '', { width: '2rem', height: '2rem' }),
     sitter: formatIcon('moon', '', { width: '2rem', height: '2rem' }),
     dayCare: formatIcon('house-chimney', '', {
       width: '2rem',

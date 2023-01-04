@@ -6,16 +6,14 @@ import iconLib from '../../utils/fontawesome/icons';
 const logo = iconLib.logo;
 const iconCommons = iconLib.commons;
 
-const Pricings = (props) => {
-  const heroTitle = 'Pet Sitter v0.0.1';
-  const subTitle =
-    'Culpa flank officia, in hamburger ball tip ullamco lorem boudin tri-tip ut eu irure.';
-
+const Rates = (props) => {
+  const title = "Rates";
+  
   return (
-    <>
-      <Container>
-        <span class="anchor" id={props.id}></span>
-        <h2 className="pb-5 fw-bold display-2 text-center">Pricing</h2>
+      <Container id={`#${props.id}`}>
+        <span className="anchor" id={props.id}></span>
+        <h2 className="pb-5 fw-bold display-2 text-center">{title}</h2>
+
         <div className="text-center">
           <div className="row row-cols-1 row-cols-md-3 mb-3 text-center">
             <div id="petSittingMore" className="col">
@@ -161,8 +159,7 @@ const Pricings = (props) => {
           </div>
         </div>
       </Container>
-    </>
   );
 };
 
-export default Pricings;
+export default Rates;

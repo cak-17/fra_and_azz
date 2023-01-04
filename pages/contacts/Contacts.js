@@ -6,7 +6,7 @@ import iconLib from '../../utils/fontawesome/icons';
 const logo = iconLib.logo;
 
 const Contacts = (props) => {
-  const heroTitle = 'Pet Sitter v0.0.1';
+  const heroTitle = 'Contacts';
   const subTitle =
     'Culpa flank officia, in hamburger ball tip ullamco lorem boudin tri-tip ut eu irure.';
 
@@ -23,6 +23,40 @@ const Contacts = (props) => {
           <i>{subTitle}</i>
         </p>
       </div>
+      <Container>
+        <ul
+          id="socialsBadges"
+          className="list-unstyled d-flex flex-row align-items-center justify-content-evenly w-100
+        "
+          style={{ listStyleType: 'none' }}
+        >
+          <li>
+            <a href="" target="_blank">
+              <img
+                src={
+                  'https://react-template-statics.s3.amazonaws.com/petSitter/img/madpaws-logo-lg.png'
+                }
+                width={70}
+                alt="MP"
+                className="li-link img-fluid"
+              />
+            </a>
+          </li>
+
+          <li>
+            <a href="" target="_blank">
+              <img
+                src={
+                  'https://react-template-statics.s3.amazonaws.com/petSitter/img/pawshake-logo-lg.png'
+                }
+                width={40}
+                alt="PS"
+                className="li-link img-fluid circle"
+              />
+            </a>
+          </li>
+        </ul>
+      </Container>
     </Container>
   );
 };

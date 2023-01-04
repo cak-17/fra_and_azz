@@ -1,1 +1,78 @@
-#navBar { }
+/*
+background show on scroll
+increase font size and change color
+*/
+
+.nav-offcanvas-link {
+  padding: 0.8rem;
+  color: var(--lighter-peri-60);
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  display: inline-block;
+}
+
+.nav-offcanvas-link:after,
+.nav-offcanvas-link:before{
+  content: "";
+  position: absolute;
+  display: block;
+  border: 0px solid transparent;
+  width: 0%;
+  height: 0%;
+  transition: all 0.5s ease;
+}
+
+.nav-offcanvas-link:after {
+  width: 0%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+
+.nav-offcanvas-link:before {
+  width: 0%;
+  height: 0%;
+  right: 0;
+  bottom: 0;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+.nav-offcanvas-link:hover::before,
+.nav-offcanvas-link:hover::after {
+  width: 20%;
+  height: 20%;
+  border-color: var(--deep-violet);
+}
+
+.nav-offcanvas-link:hover {
+  color: white;
+}
+
+div.nav-offcanvas-text::first-letter {
+  font-family: var(--font-2);
+}
+
+.active {
+  color: white !important;
+  border-color: white  !important;
+}
+
+/* Desktop */
+@media only screen and (min-width: 992px) {
+  #navBar {
+    background: linear-gradient(to bottom, var(--lighter-peri) 80%, transparent 100%);
+  }
+  .nav-offcanvas-link {
+    color: var(--deep-violet);
+  }
+  .nav-offcanvas-link:hover {
+    color: var(--deep-violet);
+    filter: drop-shadow(2px 2px 0px var(--sky-magenta));
+  }
+  .active {
+    filter: drop-shadow(2px 2px 0px var(--sky-magenta));
+  }
+}
