@@ -17,7 +17,7 @@ const Service = (props) => {
       <p>
         {description}
       </p>
-      <a href={link_to} className="btn btn-success">
+      <a href={link_to} className="btn btn-warning">
         Read More
       </a>
     </div>

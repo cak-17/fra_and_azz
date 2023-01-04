@@ -33,7 +33,7 @@ const Rates = (props) => {
                   </ul>
                   <button
                     type="button"
-                    className="w-100 btn btn-lg btn-outline-success"
+                    className="w-100 btn btn-lg btn-outline-warning"
                   >
                     Sign up for free
                   </button>
@@ -57,7 +57,7 @@ const Rates = (props) => {
                   </ul>
                   <button
                     type="button"
-                    className="w-100 btn btn-lg btn-success"
+                    className="w-100 btn btn-lg btn-warning"
                   >
                     Get started
                   </button>
@@ -65,9 +65,9 @@ const Rates = (props) => {
               </div>
             </div>
             <div className="col">
-              <div className="card mb-4 rounded-3 shadow-sm border-warning">
-                <div className="card-header py-3 text-white bg-warning border-warning">
-                  <h4 className="my-0 fw-normal text-dark">Pet Walking</h4>
+              <div className="card mb-4 rounded-3 shadow-sm">
+                <div className="card-header py-3 bg-primary-gr border-warning">
+                  <h4 className="my-0 fw-normal fw-bold text-light">Pet Walking</h4>
                 </div>
                 <div className="card-body">
                   <h1 className="card-title pricing-card-title">
@@ -81,7 +81,7 @@ const Rates = (props) => {
                   </ul>
                   <button
                     type="button"
-                    className="w-100 btn btn-lg btn-success"
+                    className="w-100 btn btn-lg btn-warning"
                   >
                     Contact us
                   </button>

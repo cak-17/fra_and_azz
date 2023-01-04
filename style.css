@@ -185,6 +185,14 @@ body {
   border-color: var(--dark-pink) !important;
 }
 
+.btn-outline-warning {
+  border-color: var(--pink) !important;
+  color:var(--pink) !important;
+}
+.btn-outline-warning:hover {
+  background-color: var(--pink) !important;
+  color: white !important;
+}
 /* MEDIA */
 
 /* Desktop */
