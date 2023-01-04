@@ -1,0 +1,199 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+:root {
+  --col-primary: #389b77;
+  --col-primary2: #009b44;
+
+  --col-primary-dark: #276850;
+  --col-primary-dark2: #00633a;
+
+  --col-primary-light: #47cf9d;
+  --col-primary-light2: #00b358;
+
+  --col-secondary-dark: #004381;
+
+  --col-yellow: #f5c928;
+  --col-gray: #5e6673;
+
+  --background: #ddd;
+
+  --overlay-color-1: var(--col-primary);
+  --overlay-color-2: var(--col-secondary-dark);
+}
+html {
+  font-family: 'Lato', 'Verdana', sans-serif;
+}
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100vh;
+  /* add background property from JS */
+  background: url('https://react-template-statics.s3.amazonaws.com/img/bg-mobile-fallback.jpg')
+    #ffffff00 no-repeat center center scroll;
+  background-size: cover;
+}
+body::before {
+  background-color: var(--overlay-color-2);
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+  z-index: 0;
+}
+
+/* BTN */
+.btn {
+  padding: 10px;
+  cursor: pointer;
+}
+.btn.btn-primary {
+  border: 0;
+  border-radius: 3px;
+  background-color: var(--col-primary);
+  transition: background-color 0.3s ease-in-out;
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.btn.btn-primary:hover {
+  background-color: var(--col-primary-dark);
+}
+.btn.btn-dark {
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.692);
+  color: white;
+  transition: color 0.3s ease-in-out;
+  font-size: 1.5rem;
+}
+.btn.btn-dark:hover {
+  color: var(--col-primary);
+}
+
+/* MASTHEAD */
+.masthead {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.masthead::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.masthead .masthead-content {
+  position: relative;
+  max-width: 40rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.masthead .masthead-content h1 {
+  margin: 10px 30px;
+  font-size: 3rem;
+}
+.masthead .masthead-content p {
+  font-size: 1.4rem;
+  font-weight: 100;
+  text-align: left;
+  line-height: 1.6rem;
+  font-style: italic;
+  margin: 30px;
+}
+
+@media (min-width: 992px) {
+  .masthead {
+    height: 100vh;
+    width: 75vw;
+    min-height: 0;
+    padding-bottom: 0;
+  }
+  .masthead:before {
+    transform: skewX(-9deg);
+    transform-origin: top right;
+  }
+  .masthead .masthead-content {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2rem;
+    padding-right: 9rem;
+  }
+  .masthead .masthead-content h1,
+  .masthead .masthead-content .h1 {
+    font-size: 3.5rem;
+  }
+  .masthead .masthead-content p {
+    font-size: 1.3rem;
+  }
+  .social-icons {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 2.5rem;
+    width: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .masthead {
+    width: 65vw;
+  }
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.social-icons .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100rem;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+.social-icons-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .social-icons {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 2.5rem;
+    width: auto;
+  }
+  .social-icons-content {
+    flex-direction: column;
+  }
+}

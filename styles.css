@@ -1,0 +1,15 @@
+body {
+    background: linear-gradient(to top, rgb(57, 57, 57),rgb(17, 17, 17));
+}
+.bg-gray {
+    background: linear-gradient(62deg, rgba(17, 17, 17, 0.654), rgba(0, 0, 0, 0.687))
+}
+#profile-links a {
+    transition: transform 0.3s ease-in-out;
+    color: white;
+    text-decoration: none;
+}
+#profile-links a:hover { 
+    transform: translate(0px, 10px);
+}
+

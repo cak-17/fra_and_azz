@@ -1,0 +1,16 @@
+#EnquiryForm {
+  border-radius: 6px;
+  padding: 20px 30px;
+  color: white;
+  font-weight: bold;
+  min-width: 300px;
+  margin-left: 20px;
+}
+
+#logo {
+  position: relative;
+  top: 80px;
+  right: -55%;
+  width: 300px;
+  z-index: 2;
+}

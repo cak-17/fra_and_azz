@@ -1,0 +1,15 @@
+.circle {
+  border-radius: 50%;
+}
+.li-link {
+  transition: all 0.2s ease-in-out;
+}
+.li-link:hover {
+  transform: translate(0px, -10px);
+}
+
+#Home {
+  position: relative;
+  top: 5rem;
+  margin-bottom: 6rem;
+}
